@@ -1,4 +1,4 @@
-package academy.mukandrew.randmcatalog.domain.models
+package academy.mukandrew.randmcatalog.domain.enums
 
 enum class Gender(val value: String) {
     FEMALE("female"),

@@ -1,4 +1,4 @@
-package academy.mukandrew.randmcatalog.domain.models.search
+package academy.mukandrew.randmcatalog.domain.models.builders.search
 
 class SearchEpisode private constructor(
     private val name: String? = null,

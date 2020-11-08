@@ -1,7 +1,7 @@
-package academy.mukandrew.randmcatalog.domain.models.search
+package academy.mukandrew.randmcatalog.domain.models.builders.search
 
-import academy.mukandrew.randmcatalog.domain.models.CharacterStatus
-import academy.mukandrew.randmcatalog.domain.models.Gender
+import academy.mukandrew.randmcatalog.domain.enums.CharacterStatus
+import academy.mukandrew.randmcatalog.domain.enums.Gender
 
 class SearchCharacter private constructor(
     private val name: String? = null,

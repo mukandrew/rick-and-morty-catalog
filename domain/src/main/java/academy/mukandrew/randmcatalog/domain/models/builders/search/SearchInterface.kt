@@ -1,4 +1,4 @@
-package academy.mukandrew.randmcatalog.domain.models.search
+package academy.mukandrew.randmcatalog.domain.models.builders.search
 
 interface SearchInterface {
     fun hasValidField(): Boolean

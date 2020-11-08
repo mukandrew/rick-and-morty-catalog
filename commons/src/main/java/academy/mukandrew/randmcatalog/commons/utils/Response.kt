@@ -14,6 +14,8 @@ class Response<S : Any> private constructor(
         }
     }
 
+    val isSuccess: Boolean = data != null
+
     fun on(onSuccess: (data: S) -> Unit, onError: (error: Exception) -> Unit) {
         if (data != null) onSuccess(data) else onError(error)
     }

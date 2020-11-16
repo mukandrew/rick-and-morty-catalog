@@ -1,8 +1,8 @@
 package academy.mukandrew.randmcatalog.data.repositories
 
-import academy.mukandrew.randmcatalog.domain.models.builders.search.SearchInterface
-import academy.mukandrew.randmcatalog.domain.repositories.EpisodeRepository
-import academy.mukandrew.randmcatalog.domain.usecases.EpisodesResponse
+import academy.mukandrew.randmcatalog.models.builders.search.SearchInterface
+import academy.mukandrew.randmcatalog.repositories.EpisodeRepository
+import academy.mukandrew.randmcatalog.usecases.EpisodesResponse
 
 class EpisodeRepositoryImpl : EpisodeRepository() {
     override suspend fun getEpisodes(ids: List<Int>): EpisodesResponse {

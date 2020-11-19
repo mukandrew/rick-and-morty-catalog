@@ -11,6 +11,6 @@ class GetCharactersUseCaseImpl(
     override suspend fun invoke(ids: List<Int>): CharactersResponse {
         if (ids.isEmpty()) return Response.of(Exception())
 
-        return repository.getCharacters(ids)
+        return repository.getCharacters()
     }
 }

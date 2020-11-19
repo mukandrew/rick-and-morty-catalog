@@ -1,19 +1,23 @@
 package academy.mukandrew.randmcatalog.data.repositories
 
+import academy.mukandrew.randmcatalog.data.remote.datasources.EpisodeRemoteDataSource
 import academy.mukandrew.randmcatalog.models.builders.search.SearchInterface
 import academy.mukandrew.randmcatalog.repositories.EpisodeRepository
 import academy.mukandrew.randmcatalog.usecases.EpisodesResponse
+import academy.mukandrew.randmcatalog.utils.Response
 
-class EpisodeRepositoryImpl : EpisodeRepository() {
-    override suspend fun getEpisodes(ids: List<Int>): EpisodesResponse {
-        TODO("Not yet implemented")
+class EpisodeRepositoryImpl(
+    private val remoteDataSource: EpisodeRemoteDataSource
+) : EpisodeRepository() {
+    override suspend fun getEpisodes(id: String): EpisodesResponse {
+        return Response.of(emptyList())
     }
 
     override suspend fun listPageEpisodes(pageNumber: Int): EpisodesResponse {
-        TODO("Not yet implemented")
+        return Response.of(emptyList())
     }
 
     override suspend fun searchEpisodes(searchModel: SearchInterface): EpisodesResponse {
-        TODO("Not yet implemented")
+        return Response.of(emptyList())
     }
 }

@@ -16,7 +16,6 @@ import org.junit.Before
 import org.junit.Test
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.anyInt
-import org.mockito.Mockito.anyList
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.never
 import org.mockito.Mockito.times
@@ -52,7 +51,7 @@ class CharacterUseCaseTest {
     @Test
     fun `get character exception empty ids`() = runBlocking {
         val response = getCharacterUseCase(emptyList())
-        verify(repository, never()).getCharacters(anyList())
+        verify(repository, never()).getCharacters()
         assert(response.isSuccess.not())
         assert(response.data == null)
         assert(response.error is Exception)
@@ -60,12 +59,12 @@ class CharacterUseCaseTest {
 
     @Test
     fun `get character success`() = runBlocking {
-        `when`(repository.getCharacters(ids))
+        `when`(repository.getCharacters())
             .thenReturn(Response.of(characterList))
 
         val response = getCharacterUseCase(ids)
 
-        verify(repository, times(1)).getCharacters(ids)
+        verify(repository, times(1)).getCharacters()
         assert(response.isSuccess)
         assert(response.data is List<CharacterContract>)
         assert(response.data?.equals(characterList) == true)
@@ -74,10 +73,10 @@ class CharacterUseCaseTest {
 
     @Test
     fun `get character exception`() = runBlocking {
-        `when`(repository.getCharacters(ids))
+        `when`(repository.getCharacters())
             .thenReturn(Response.of(Exception()))
         val response = getCharacterUseCase(ids)
-        verify(repository, times(1)).getCharacters(ids)
+        verify(repository, times(1)).getCharacters()
         assert(response.isSuccess.not())
         assert(response.data == null)
         assert(response.error is Exception)

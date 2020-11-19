@@ -7,16 +7,17 @@ import academy.mukandrew.randmcatalog.usecases.CharactersResponse
 import academy.mukandrew.randmcatalog.utils.Response
 
 class CharacterRepositoryImpl(
+    private val remoteDataSource: CharacterRemoteDataSource
 ) : CharacterRepository() {
-    override suspend fun getCharacters(ids: List<Int>): CharactersResponse {
-        return Response.Companion.of(emptyList())
+    override suspend fun getCharacters(id: String): CharactersResponse {
+        return Response.of(emptyList())
     }
 
     override suspend fun listPageCharacters(pageNumber: Int): CharactersResponse {
-        TODO("Not yet implemented")
+        return Response.of(emptyList())
     }
 
     override suspend fun searchCharacter(searchModel: SearchInterface): CharactersResponse {
-        TODO("Not yet implemented")
+        return Response.of(emptyList())
     }
 }

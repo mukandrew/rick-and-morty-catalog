@@ -8,6 +8,6 @@ class GetLocationsUseCaseImpl(
     private val repository: LocationRepository,
 ) : GetLocationsUseCase() {
     override suspend fun invoke(ids: List<Int>): LocationsResponse {
-        return repository.getLocations(ids)
+        return repository.getLocations()
     }
 }

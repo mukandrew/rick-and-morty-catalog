@@ -2,7 +2,7 @@ package academy.mukandrew.randmcatalog.models.builders.search
 
 class SearchEpisode private constructor(
     private val name: String? = null,
-    private val episode: Int? = null,
+    private val episode: Int? = null
 ) : SearchInterface {
 
     companion object {

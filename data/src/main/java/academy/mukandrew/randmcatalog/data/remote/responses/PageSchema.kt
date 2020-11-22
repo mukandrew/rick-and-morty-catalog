@@ -5,5 +5,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class PageSchema<T : BaseSchema>(
     val info: InfoPageSchema,
-    val results: List<T>,
+    val results: List<T>
 ) : BaseSchema()

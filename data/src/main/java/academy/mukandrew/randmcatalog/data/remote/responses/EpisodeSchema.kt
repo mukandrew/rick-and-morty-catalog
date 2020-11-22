@@ -10,5 +10,5 @@ class EpisodeSchema(
     @SerializedName("air_date")
     val airDate: String? = null,
     val episode: String? = null,
-    val characters: List<String>? = null,
+    val characters: List<String>? = null
 ) : BaseSchema()

@@ -8,5 +8,5 @@ data class LocationEntity(
     override val type: String?,
     override val dimension: String?,
     override val residents: List<String>?,
-    override val url: String?,
+    override val url: String?
 ) : LocationContract()

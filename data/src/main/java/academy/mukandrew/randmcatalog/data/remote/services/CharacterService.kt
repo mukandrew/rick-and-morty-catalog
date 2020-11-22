@@ -22,6 +22,9 @@ interface CharacterService {
     @GET(FIND_PATH)
     suspend fun find(@Path(ID_PATH_NAME) id: String): Response<CharacterSchema>
 
+    @GET(FIND_PATH)
+    suspend fun findMulti(@Path(ID_PATH_NAME) id: String): Response<List<CharacterSchema>>
+
     @GET(SEARCH_PATH)
     suspend fun search(@QueryMap params: Map<String, String>): Response<PageSchema<CharacterSchema>>
 }

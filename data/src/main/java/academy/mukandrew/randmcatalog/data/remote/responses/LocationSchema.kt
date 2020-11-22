@@ -8,5 +8,5 @@ data class LocationSchema(
     val name: String? = null,
     val type: String? = null,
     val dimension: String? = null,
-    val residents: List<String>? = null,
+    val residents: List<String>? = null
 ) : BaseSchema()

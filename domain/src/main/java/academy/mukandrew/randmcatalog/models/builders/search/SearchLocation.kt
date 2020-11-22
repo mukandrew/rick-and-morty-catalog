@@ -3,7 +3,7 @@ package academy.mukandrew.randmcatalog.models.builders.search
 class SearchLocation private constructor(
     private val name: String? = null,
     private val type: String? = null,
-    private val dimension: String? = null,
+    private val dimension: String? = null
 ) : SearchInterface {
     companion object {
         private const val QUERY_NAME = "name"
@@ -13,8 +13,8 @@ class SearchLocation private constructor(
 
     override fun hasValidField(): Boolean {
         return (!name.isNullOrEmpty() && !name.isNullOrBlank()) ||
-                (!type.isNullOrEmpty() && !type.isNullOrBlank()) ||
-                (!dimension.isNullOrEmpty() && !dimension.isNullOrBlank())
+            (!type.isNullOrEmpty() && !type.isNullOrBlank()) ||
+            (!dimension.isNullOrEmpty() && !dimension.isNullOrBlank())
     }
 
     override fun toMap(): Map<String, Any> {

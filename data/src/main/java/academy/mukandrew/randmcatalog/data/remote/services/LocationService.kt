@@ -13,7 +13,7 @@ interface LocationService {
         private const val BASE_PATH = "location/"
         private const val ID_PATH_NAME = "id"
         private const val FIND_PATH = "$BASE_PATH/{$ID_PATH_NAME}"
-        private const val SEARCH_PATH = "${BASE_PATH}?"
+        private const val SEARCH_PATH = "$BASE_PATH?"
     }
 
     @GET(BASE_PATH)

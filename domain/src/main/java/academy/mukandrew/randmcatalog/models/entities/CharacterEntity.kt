@@ -14,5 +14,5 @@ data class CharacterEntity(
     override val origin: LocationEntity? = null,
     override val location: LocationEntity? = null,
     override val image: String? = null,
-    override val episodes: List<Int>? = null,
+    override val episodes: List<Int>? = null
 ) : CharacterContract()

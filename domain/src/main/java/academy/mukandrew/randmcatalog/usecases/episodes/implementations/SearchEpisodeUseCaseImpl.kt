@@ -7,7 +7,7 @@ import academy.mukandrew.randmcatalog.usecases.episodes.abstracts.SearchEpisodeU
 import academy.mukandrew.randmcatalog.utils.Response
 
 class SearchEpisodeUseCaseImpl(
-    private val repository: EpisodeRepository,
+    private val repository: EpisodeRepository
 ) : SearchEpisodeUseCase() {
     override suspend fun invoke(searchModel: SearchInterface): EpisodesResponse {
         if (!searchModel.hasValidField()) return Response.of(Exception())

@@ -6,7 +6,7 @@ import academy.mukandrew.randmcatalog.usecases.characters.abstracts.ListPageChar
 import academy.mukandrew.randmcatalog.utils.Response
 
 class ListPageCharactersUseCaseImpl(
-    private val repository: CharacterRepository,
+    private val repository: CharacterRepository
 ) : ListPageCharactersUseCase() {
     companion object {
         private const val MIN_PAGE_NUMBER = 1

@@ -7,7 +7,7 @@ import academy.mukandrew.randmcatalog.usecases.locations.abstracts.SearchLocatio
 import academy.mukandrew.randmcatalog.utils.Response
 
 class SearchLocationUseCaseImpl(
-    private val repository: LocationRepository,
+    private val repository: LocationRepository
 ) : SearchLocationUseCase() {
     override suspend fun invoke(searchModel: SearchInterface): LocationsResponse {
         if (!searchModel.hasValidField()) return Response.of(Exception())

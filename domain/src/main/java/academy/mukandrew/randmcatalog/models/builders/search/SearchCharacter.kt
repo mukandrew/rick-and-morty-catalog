@@ -8,7 +8,7 @@ class SearchCharacter private constructor(
     private val status: CharacterStatus? = null,
     private val species: String? = null,
     private val type: String? = null,
-    private val gender: Gender? = null,
+    private val gender: Gender? = null
 ) : SearchInterface {
 
     companion object {
@@ -21,10 +21,10 @@ class SearchCharacter private constructor(
 
     override fun hasValidField(): Boolean {
         return (!name.isNullOrEmpty() && !name.isNullOrBlank()) ||
-                (status != null) ||
-                (!species.isNullOrEmpty() && !species.isNullOrBlank()) ||
-                (!type.isNullOrEmpty() && !type.isNullOrBlank()) ||
-                (gender != null)
+            (status != null) ||
+            (!species.isNullOrEmpty() && !species.isNullOrBlank()) ||
+            (!type.isNullOrEmpty() && !type.isNullOrBlank()) ||
+            (gender != null)
     }
 
     override fun toMap(): Map<String, Any> {

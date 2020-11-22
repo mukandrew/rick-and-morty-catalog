@@ -7,5 +7,5 @@ data class EpisodeEntity(
     override val name: String?,
     override val airDate: String?,
     override val number: String?,
-    override val characters: List<Int>?,
+    override val characters: List<Int>?
 ) : EpisodeContract()

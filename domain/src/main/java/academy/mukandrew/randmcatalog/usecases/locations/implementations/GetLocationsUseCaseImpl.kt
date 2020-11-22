@@ -5,9 +5,9 @@ import academy.mukandrew.randmcatalog.usecases.LocationsResponse
 import academy.mukandrew.randmcatalog.usecases.locations.abstracts.GetLocationsUseCase
 
 class GetLocationsUseCaseImpl(
-    private val repository: LocationRepository,
+    private val repository: LocationRepository
 ) : GetLocationsUseCase() {
     override suspend fun invoke(ids: List<Int>): LocationsResponse {
-        return repository.getLocations()
+        return repository.getLocations("")
     }
 }

@@ -7,7 +7,7 @@ import academy.mukandrew.randmcatalog.usecases.characters.abstracts.SearchCharac
 import academy.mukandrew.randmcatalog.utils.Response
 
 class SearchCharacterUseCaseImpl(
-    private val repository: CharacterRepository,
+    private val repository: CharacterRepository
 ) : SearchCharacterUseCase() {
     override suspend fun invoke(searchModel: SearchInterface): CharactersResponse {
         if (!searchModel.hasValidField()) return Response.of(Exception())

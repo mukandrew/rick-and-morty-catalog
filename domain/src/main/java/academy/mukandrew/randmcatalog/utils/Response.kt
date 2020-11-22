@@ -2,7 +2,7 @@ package academy.mukandrew.randmcatalog.utils
 
 class Response<S : Any> private constructor(
     val data: S? = null,
-    val error: Exception? = null,
+    val error: Exception? = null
 ) {
     companion object {
         fun <T : Any> of(value: T): Response<T> {

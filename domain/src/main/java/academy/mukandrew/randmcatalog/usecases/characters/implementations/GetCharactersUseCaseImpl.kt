@@ -6,11 +6,11 @@ import academy.mukandrew.randmcatalog.usecases.characters.abstracts.GetCharacter
 import academy.mukandrew.randmcatalog.utils.Response
 
 class GetCharactersUseCaseImpl(
-    private val repository: CharacterRepository,
+    private val repository: CharacterRepository
 ) : GetCharactersUseCase() {
     override suspend fun invoke(ids: List<Int>): CharactersResponse {
         if (ids.isEmpty()) return Response.of(Exception())
 
-        return repository.getCharacters()
+        return repository.getCharacters("")
     }
 }

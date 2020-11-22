@@ -9,8 +9,8 @@ import retrofit2.Retrofit
 class EpisodeRemoteDataSource(retrofit: Retrofit) : DataSource<EpisodesResponse> {
     private val api: EpisodeService = retrofit.create(EpisodeService::class.java)
 
-    override suspend fun find(id: String): EpisodesResponse {
-        val response = api.find(id)
+    override suspend fun find(ids: List<Int>): EpisodesResponse {
+//        val response = api.find(id)
         return Response.of(emptyList())
     }
 

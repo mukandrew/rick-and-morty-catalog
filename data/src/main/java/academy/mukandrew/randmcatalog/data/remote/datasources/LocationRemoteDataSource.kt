@@ -9,8 +9,8 @@ import retrofit2.Retrofit
 class LocationRemoteDataSource(retrofit: Retrofit) : DataSource<LocationsResponse> {
     private val api: LocationService = retrofit.create(LocationService::class.java)
 
-    override suspend fun find(id: String): LocationsResponse {
-        val response = api.find(id)
+    override suspend fun find(ids: List<Int>): LocationsResponse {
+//        val response = api.find(id)
         return Response.of(emptyList())
     }
 

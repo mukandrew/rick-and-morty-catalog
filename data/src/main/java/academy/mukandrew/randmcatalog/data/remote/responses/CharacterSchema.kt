@@ -1,6 +1,5 @@
 package academy.mukandrew.randmcatalog.data.remote.responses
 
-import academy.mukandrew.randmcatalog.enums.CharacterStatus
 import academy.mukandrew.randmcatalog.models.contracts.CharacterContract
 import academy.mukandrew.randmcatalog.models.entities.CharacterEntity
 import kotlinx.android.parcel.Parcelize
@@ -20,16 +19,16 @@ data class CharacterSchema(
 ) : BaseSchema() {
     fun toContract(): CharacterContract {
         return CharacterEntity(
-            id,
-            name,
-            CharacterStatus.from(status),
-            species,
-            type,
-            gender,
-            origin,
-            location,
-            image,
-            episodes
+            id
+//            name,
+//            CharacterStatus.from(status),
+//            species,
+//            type,
+//            gender,
+//            origin,
+//            location,
+//            image,
+//            episodes
         )
     }
 }
